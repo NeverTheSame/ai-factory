@@ -1,0 +1,13 @@
+# Factory runtime state: one folder per job, never committed
+factory/jobs/*
+!factory/jobs/.gitkeep
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Local env
+.env
+.env.*
