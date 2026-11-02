@@ -1,0 +1,14 @@
+{
+  "name": "ai-factory",
+  "description": "Claude Code workflow plugins for building AI applications.",
+  "owner": {
+    "name": "NeverTheSame"
+  },
+  "plugins": [
+    {
+      "name": "ai-factory",
+      "source": "./plugins/ai-factory",
+      "description": "Software factory loop for AI projects: spec, build in a worktree, four parallel reviews with AI-runtime checklists, then merge or escalate."
+    }
+  ]
+}

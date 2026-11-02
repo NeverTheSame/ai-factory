@@ -54,8 +54,9 @@ in the worktree. You write exactly one file, the review path you were given
 - [ ] Independent checks run in parallel where the pipeline allows it
 - [ ] No new orchestration framework without a reason written in spec.md
 
-Add stack-specific rows here when you adopt the template: your conventions,
-error-handling and testing rules.
+**Project-specific checklist rows:** also apply every row under
+`## Review checklist additions` → `### code` in the repo's `AGENTS.md`.
+If that section is missing or empty, say so in your output.
 
 ## Output format
 

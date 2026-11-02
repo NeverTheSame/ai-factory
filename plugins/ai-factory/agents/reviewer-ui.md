@@ -40,8 +40,9 @@ dark theme if the app has both. Stop the server when you are done.
 - [ ] A write action (charge, debit, delete, send) shows its result, and
       confirms before it happens where the spec asks
 
-Add product-specific rows here when you adopt the template: tokens, breakpoints,
-brand rules.
+**Project-specific checklist rows:** also apply every row under
+`## Review checklist additions` → `### ui` in the repo's `AGENTS.md`.
+If that section is missing or empty, say so in your output.
 
 ## Output format
 

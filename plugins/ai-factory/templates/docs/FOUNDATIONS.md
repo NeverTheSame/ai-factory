@@ -4,8 +4,8 @@ This template rests on two ideas. Each answers a different question.
 
 | | Answers | Lives in |
 |---|---|---|
-| **Build loop** (software factory) | *How* a feature becomes merged code | `.claude/skills/factory/`, `.claude/agents/` |
-| **Runtime shape** (AI Engineering, ch. 10) | *What shape* the app's AI request path has | `AGENTS.md` → Runtime shape, reviewer checklists |
+| **Build loop** (software factory) | *How* a feature becomes merged code | the `ai-factory` plugin (skill + 7 agents) |
+| **Runtime shape** (AI Engineering, ch. 10) | *What shape* the app's AI request path has | `AGENTS.md` → Runtime shape and Review checklist additions |
 
 They are not alternatives. **The build loop is the process. The runtime shape is
 what the loop's reviewers check against.** Without the runtime shape, the
@@ -86,14 +86,15 @@ Four places, all files the agents already read:
 
 ## Order of operations for a new app
 
-1. **Shape:** fill in `docs/worksheet.md`: have, need or skip for each component.
+0. **Install:** run `/ai-factory:init` in the repo.
+1. **Shape:** fill in `docs/ai-factory/worksheet.md`: have, need or skip for each component.
 2. **Teach:** copy it into `AGENTS.md` → Runtime shape, and prove the setup and
    test commands from a cold worktree.
-3. **Arm:** add stack-specific rows to each reviewer's checklist and to the
-   approver's escalate list.
+3. **Arm:** fill in `AGENTS.md` → Review checklist additions, one subsection
+   per reviewer, plus the approver's extra escalate items.
 4. **Pilot:** run one small job, one job you expect to escalate, and two jobs in
    parallel. At least one real CHANGES round should get fixed on resume.
 5. **Grow:** add a runtime component only when observability shows the problem
-   it fixes. File it as a `/factory` job.
+   it fixes. File it as an `/ai-factory:factory` job.
 6. **Learn:** once a month, fold recurring review findings back into the
-   checklists. They are the factory's memory.
+   Review checklist additions in `AGENTS.md`. They are the factory's memory.

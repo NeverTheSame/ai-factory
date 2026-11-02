@@ -34,7 +34,9 @@ Escalate if the diff does **any** of these, even when every review says PASS:
 - removes a trace, metric, alert or eval (6)
 - changes what user feedback is stored, or how it feeds ranking or training (8)
 
-Add project-specific rows here when you adopt the template.
+**Project-specific escalate items:** also apply every row under
+`## Review checklist additions` → `### approver` in the repo's `AGENTS.md`.
+If that section is missing or empty, say so in your output.
 
 ## Also escalate when
 

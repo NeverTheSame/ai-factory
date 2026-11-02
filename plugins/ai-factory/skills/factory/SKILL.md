@@ -1,6 +1,6 @@
 ---
 name: factory
-description: Run a feature through the software factory loop (spec, build in an isolated worktree, four parallel reviews, approval gate, then merge or escalate to a human). Use when the user runs /factory, /factory next, /factory approve <job-id>, or /factory rework <job-id> <note>.
+description: Run a feature through the software factory loop (spec, build in an isolated worktree, four parallel reviews, approval gate, then merge or escalate to a human). Use when the user runs /ai-factory:factory (or /factory) with a feature, next, approve <job-id>, or rework <job-id> <note>.
 argument-hint: "<feature> | next | approve <job-id> | rework <job-id> <note>"
 disable-model-invocation: true
 ---
@@ -12,7 +12,7 @@ You are the orchestrator for this run. Read these rules before every action.
 ## Hard rules
 
 1. **You never write code, specs, reviews or decisions yourself.** You spawn the
-   agents in `.claude/agents/` and route files between them.
+   factory agents (see Agent names below) and route files between them.
 2. **You are the only writer of `job.json`** and of `rework-<k>.md`. Every agent
    writes exactly one output file (the builder also writes code in its worktree).
 3. **Agents get context from files, not from this conversation.** Every prompt
@@ -28,9 +28,25 @@ You are the orchestrator for this run. Read these rules before every action.
    prompt bug to fix in the agent file, not something to retry around.
 5. **Never push, never open a PR, never deploy.** Merging is local only.
 
+## Agent names
+
+When this is installed as the `ai-factory` plugin, the agents are named
+`ai-factory:spec-writer`, `ai-factory:builder`, `ai-factory:reviewer-security`,
+`ai-factory:reviewer-code`, `ai-factory:reviewer-ux`, `ai-factory:reviewer-ui`
+and `ai-factory:approver`. When the files were copied into `.claude/agents/`
+instead, the same names have no prefix. Use the form your Agent tool lists.
+Below, agents are written without the prefix. If none of them is available,
+stop and say so. Never substitute a general-purpose agent.
+
+## Per-project additions
+
+Every agent also applies the rows under **Review checklist additions** in the
+repo's `AGENTS.md`. Remind each agent of this in its prompt.
+
 ## Input
 
-`$ARGUMENTS` is one of:
+The command is `/ai-factory:factory` as a plugin, or `/factory` when copied.
+Below it's written as `/factory`. `$ARGUMENTS` is one of:
 
 | Form | Action |
 |---|---|

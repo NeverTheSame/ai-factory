@@ -3,7 +3,7 @@
 Every factory agent reads this file before it does anything. Replace every
 `TODO`. A vague answer here produces vague reviews.
 
-Read `docs/FOUNDATIONS.md` for how the factory and the runtime shape fit together.
+Read `docs/ai-factory/FOUNDATIONS.md` for how the factory and the runtime shape fit together.
 
 ## Project
 
@@ -48,7 +48,7 @@ TODO   # build
 
 ## Runtime shape
 
-The AI request path of this app (see `docs/FOUNDATIONS.md`). Status is `have`,
+The AI request path of this app (see `docs/ai-factory/FOUNDATIONS.md`). Status is `have`,
 `need` or `skip`. `skip` is fine: add a component only when a measured problem
 calls for it.
 
@@ -66,3 +66,25 @@ calls for it.
 ## Data the agents must not send to external APIs
 
 - TODO (for example: raw personal data, uploaded files, credentials)
+
+## Review checklist additions
+
+Project-specific rows that each factory agent applies on top of its built-in
+checklist. The agent files are shared across projects; anything specific to
+this repo goes here. A vague row produces vague PASSes, so make each row checkable.
+
+### security
+- TODO: auth model, secrets store, data classes, dependency policy
+
+### code
+- TODO: conventions, error-handling and testing rules
+
+### ux
+- TODO: key user flows, copy rules
+
+### ui
+- TODO: design tokens, breakpoints, brand rules
+
+### approver
+Always escalate, in addition to the built-in list:
+- TODO: for example, changes to `billing/`, the public API schema, or prompts under `prompts/`

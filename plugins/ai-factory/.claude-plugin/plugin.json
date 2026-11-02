@@ -1,0 +1,11 @@
+{
+  "name": "ai-factory",
+  "version": "0.1.0",
+  "description": "Software factory loop for AI projects: spec, build in a worktree, four parallel reviews with AI-runtime checklists, then merge or escalate.",
+  "author": {
+    "name": "NeverTheSame"
+  },
+  "repository": "https://github.com/NeverTheSame/ai-factory",
+  "license": "MIT",
+  "keywords": ["factory", "subagents", "code-review", "ai-engineering", "workflow"]
+}

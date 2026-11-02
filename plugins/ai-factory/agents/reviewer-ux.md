@@ -41,8 +41,9 @@ input, invalid input, slow or failed backend). Stop the server when you are done
 - [ ] Regenerate or retry produces a fresh result and is not served from cache
 - [ ] Asking for feedback does not block the user's main task
 
-Add product-specific rows here when you adopt the template: your key flows and
-the copy rules.
+**Project-specific checklist rows:** also apply every row under
+`## Review checklist additions` → `### ux` in the repo's `AGENTS.md`.
+If that section is missing or empty, say so in your output.
 
 ## Output format
 

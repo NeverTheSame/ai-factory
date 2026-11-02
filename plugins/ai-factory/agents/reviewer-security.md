@@ -46,8 +46,9 @@ changes state outside the request)
 **4 · Caches** (security slice only)
 - [ ] No cache entry can be served to a different user than the one who created it
 
-Add stack-specific rows here when you adopt the template: your auth model,
-secrets store, and data classes.
+**Project-specific checklist rows:** also apply every row under
+`## Review checklist additions` → `### security` in the repo's `AGENTS.md`.
+If that section is missing or empty, say so in your output.
 
 ## Output format
 
